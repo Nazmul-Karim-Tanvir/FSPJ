@@ -30,7 +30,7 @@ def login_page(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                pass
+                return HttpResponseRedirect(reverse('App_Posts:home'))
 
     return render(request, 'App_Login/login.html', context={'title': 'Login', 'form': form})
 
@@ -45,3 +45,8 @@ def edit_profile(request):
     else:
         form = EditProfile(instance=current_user)
     return render(request, 'App_Login/profile.html', context={'form': form, 'title': 'Edit Profile .Social'})
+
+@login_required
+def logout_user(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('App_Login:login'))
