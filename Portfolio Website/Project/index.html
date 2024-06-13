@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazmul Karim Tanvir - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .hero {
+            background: linear-gradient(90deg, rgb(243, 85, 85) 0%, rgba(123, 158, 255, 1) 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .img-container {
+            display: inline-block;
+            overflow: hidden;
+            width: 350px;
+            height: 350px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+            border-radius: 50%;
+            margin: 0 auto;
+            border: 3px solid #007bff;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 50%;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            color: #007bff;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+            padding: 10px 20px;
+            border-bottom: 3px solid #007bff;
+        }
+
+        .project-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+            color: #343a40;
+        }
+
+        .project-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 4px solid #ddd;
+        }
+
+        .contact-form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 40px;
+            transition: background-color 0.3s;
+            color: #343a40;
+        }
+
+        .contact-form .form-control {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .contact-info .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .contact-info .info-item {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .info {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+            color: #343a40;
+        }
+
+        .dark-mode {
+            background-color: #343a40;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .navbar {
+            background-color: #222;
+        }
+
+        .dark-mode .hero {
+            background: linear-gradient(90deg, rgb(24, 1, 70) 0%, rgba(67, 67, 67, 1) 100%);
+        }
+
+        .dark-mode .section-title h2 {
+            border-color: #17a2b8;
+            color: #17a2b8;
+        }
+
+        .dark-mode .project-item {
+            background-color: #454545;
+            color: #e0e0e0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-mode .project-item:hover {
+            background-color: #5a5a5a;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode .footer {
+            background-color: #222;
+            border-top: 4px solid #444;
+        }
+
+        .dark-mode .contact-form {
+            background-color: #454545;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .contact-info .icon {
+            color: #17a2b8;
+        }
+
+        .dark-mode .contact-form button {
+            background-color: #17a2b8;
+        }
+
+        .dark-mode .contact-form button:hover {
+            background-color: #1395a0;
+        }
+
+        .dark-mode .info {
+            background-color: #5a5a5a;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .info:hover {
+            background-color: #6d6d6d;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nazmul Karim Tanvir</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" class="btn btn-outline-light ms-3">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1>Welcome to My Portfolio</h1>
+                    <p class="lead">A passionate Software Engineer with a focus on Full Stack Development and Mobile Applications.</p>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <div class="img-container">
+                        <img class="img-fluid border rounded" src="../Images/tanvir.jpg" alt="Profile Picture">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="info">
+                <p>Hello! I'm Nazmul Karim Tanvir, a dedicated web developer based in Dhaka, Bangladesh. I have a strong
+                    background in Full Stack Web Development, Mobile App Development, and have a keen interest in
+                    problem-solving and research. I hold a B.Sc. in Computer Science and Engineering from BRAC
+                    University and am currently pursuing my MSc in the same
+                    field.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info">
+                        <h3>Full Stack Web Development:</h3>
+                        <ul>
+                            <li>MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
+                            <li>Version Control: Git, GitHub</li>
+                            <li>Frontend Development: HTML, CSS, JavaScript, React.js, Bootstrap</li>
+                            <li>Backend Development: Node.js, Express.js, RESTful APIs</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h3>Mobile App Development:</h3>
+                        <ul>
+                            <li>Flutter for cross-platform development</li>
+                            <li>Android Development: Java, Kotlin</li>
+                            <li>iOS Development: Swift, Xcode</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info">
+                        <h3>Database Management:</h3>
+                        <ul>
+                            <li>SQL: MySQL, PostgreSQL</li>
+                            <li>NoSQL: MongoDB, Firebase</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h3>Other Technologies:</h3>
+                        <ul>
+                            <li>Cloud Computing: AWS, Firebase</li>
+                            <li>DevOps: Docker, Jenkins, Kubernetes</li>
+                            <li>UI/UX Design: Figma, Adobe XD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info">
+                        <h3>Software Engineer at ABC Tech</h3>
+                        <p>June 2023 - Present</p>
+                        <ul>
+                            <li>Developed and maintained web applications using the MERN stack.</li>
+                            <li>Implemented RESTful APIs for seamless backend integration.</li>
+                            <li>Optimized application performance and fixed bugs for improved user experience.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info">
+                        <h3>Mobile App Developer Intern at XYZ Solutions</h3>
+                        <p>Jan 2023 - May 2023</p>
+                        <ul>
+                            <li>Worked on building cross-platform mobile applications using Flutter.</li>
+                            <li>Collaborated with the design team to create user-friendly interfaces.</li>
+                            <li>Conducted testing and debugging to ensure app functionality and performance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <h3>Project A</h3>
+                        <p>A web application developed using React.js and Node.js, featuring a real-time chat system.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <h3>Project B</h3>
+                        <p>A mobile application built with Flutter, providing an interactive learning platform for students.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <h3>Project C</h3>
+                        <p>A full-stack application using the MERN stack, with functionalities for user authentication and data visualization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope icon"></i>
+                            <p>Email: nazmul@example.com</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone icon"></i>
+                            <p>Phone: +880 123 456 7890</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt icon"></i>
+                            <p>Address: Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Nazmul Karim Tanvir. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const themeIcon = document.getElementById('theme-icon');
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            themeIcon.classList.toggle('fa-moon');
+            themeIcon.classList.toggle('fa-sun');
+        });
+    </script>
+</body>
+
+</html>
