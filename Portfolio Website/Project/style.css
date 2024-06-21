@@ -10,6 +10,7 @@ body {
     padding: 100px 0;
 }
 
+
 .img-container {
     display: inline-block;
     overflow: hidden;
@@ -159,7 +160,8 @@ body {
 }
 
 .dark-mode .hero {
-    background: linear-gradient(90deg, rgb(24, 1, 70) 0%, rgba(67, 67, 67, 1) 100%);
+    background-color: #2234ae;
+background-image: linear-gradient(315deg, #2234ae 0%, #191714 74%);
 }
 
 .dark-mode .section-title h2 {
